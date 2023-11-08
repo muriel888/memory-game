@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+ 
+}
+ 
+body{
+    background-color: rgb(255, 18, 1);
+   
+ 
+}
+.wrapper{
+    box-sizing: border-box;
+    width: 50rem;
+    padding: 3rem 3rem;
+    position: absolute;
+    transform: translate(-50% , -50%);
+    background: rgb(248, 248, 248);
+    left: 50%;
+    max-width: 80%;
+    top: 50%;
+    border: 0.5rem solid black;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 2rem  rgba(221, 210, 206, 0.171);
+    }
+   
+    .game-container{
+        position: relative;
+        width: 100%;
+        display: grid;
+       
+    }
+ 
+    .stats-container{
+        text-align: right;
+        margin-bottom: 1.5rem;
+    }
+    .card-container{
+        margin: 0.5rem;
+        position: relative;
+        height: 11rem;
+        width: 9rem;
+        cursor: pointer;
+    }
+ 
+   
+ 
+.card-before , .card-after{
+    position: absolute;
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.3rem solid black;
+    transition: transform 0.5s ease-out;
+    backface-visibility: hidden;
+   
+   
+}
+.card-before{
+background-color: red;
+font-size: 8rem;
+font-weight: 600;
+}
+ 
+.card-after{
+    transform: rotateY(180deg);
+ 
+}
+ 
+ 
+.card-container.flipped .card-before{
+    transform: rotateY(180deg);
+}
+ 
+.card-container.flipped .card-after{
+    transform: rotateY(0deg);
+}
+.image{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0.7rem;
+}
+ 
+.controls-container{
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    top:0;
+}
+button{
+    border:none;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+ 
+#stop{
+    font-size: 1.5rem;
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    background-color: black;
+    color: white;
+}
+.controls-container button{
+    box-shadow: 0 1rem 2rem  rgba(221, 210, 206, 0.171);
+}
+ 
+.hide{
+    display: none;
+}
+ 
+#result{
+text-align: center;
+}
+ 
+#result h2{
+    font-size: 2rem;
+}
+   
+#result h4{
+  font-size: 1.2rem;
+    }
+   
+ 
+   @media screen and (max-width:480px){
+ 
+    .card-container{
+        margin: 0.5rem;
+        position: relative;
+        height: 6rem;
+        width: 4rem;
+        cursor: pointer;
+    }
+  .wrapper{
+    padding: 1rem 1rem;
+    max-width: 85%;
+    border: 0.30rem solid black;
+  }
+ 
+  .card-before{
+    background-color: red;
+    font-size: 6rem;
+    font-weight: 600;
+    }
+ 
+ }
